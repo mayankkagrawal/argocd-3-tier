@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: db-migration
+spec:
+  backoffLimit: 3
+  template:
+    spec:
+      restartPolicy: OnFailure
+      containers:
+      - name: migrate
+        image: postgres:15
+        command:
+          - sh
+          - -c
+          - |
+            echo "Running DB migration"
+            psql postgresql://admin:admin123@postgres:5432/appdb \
+            -c "CREATE TABLE IF NOT EXISTS users(id SERIAL PRIMARY KEY, name TEXT);"
