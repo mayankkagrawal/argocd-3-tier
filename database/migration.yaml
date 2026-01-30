@@ -2,6 +2,8 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: db-migration
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
 spec:
   backoffLimit: 3
   template:
