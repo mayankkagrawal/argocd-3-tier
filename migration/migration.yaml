@@ -15,5 +15,5 @@ spec:
           - -c
           - |
             echo "Running DB migration"
-            psql postgresql://admin:admin123@postgres:5432/appdb \
+            psql postgresql://admin:admin123@postgres.postgres.svc.cluster.local:5432/appdb \
             -c "CREATE TABLE IF NOT EXISTS users(id SERIAL PRIMARY KEY, name TEXT);"
