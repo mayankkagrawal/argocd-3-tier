@@ -28,30 +28,32 @@ The deployment uses:
 
 ## Repository Structure
 
+```text
 argocd-3-tier/
 ├── apps/
-│ ├── root-app.yaml
-│ ├── database-app.yaml
-│ ├── backend-app.yaml
-│ └── frontend-app.yaml
+│   ├── root-app.yaml
+│   ├── database-app.yaml
+│   ├── backend-app.yaml
+│   └── frontend-app.yaml
 │
 ├── database/
-│ ├── namespace.yaml
-│ ├── secret.yaml
-│ ├── deployment.yaml
-│ └── migration-job.yaml
+│   ├── namespace.yaml
+│   ├── postgres-secret.yaml
+│   ├── postgres-deployment.yaml
+│   ├── postgres-service.yaml
+│   └── migration-job.yaml
 │
 ├── backend/
-│ ├── deployment.yaml
-│ └── service.yaml
-| └── namespace.yaml
+│   ├── deployment.yaml
+│   └── service.yaml
 │
 ├── frontend/
-│ ├── deployment.yaml
-│ └── service.yaml
-|  └── namespace.yaml
+│   ├── deployment.yaml
+│   └── service.yaml
 │
 └── README.md
+```
+
 
 ---
 
