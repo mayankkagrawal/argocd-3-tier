@@ -35,13 +35,12 @@ argocd-3-tier/
 │   ├── database-app.yaml
 │   ├── backend-app.yaml
 │   └── frontend-app.yaml
+|   └── migration-app.yaml
 │
 ├── database/
 │   ├── namespace.yaml
 │   ├── secret.yaml
 │   ├── deployment.yaml
-│   ├── service.yaml
-│   └── job.yaml
 │
 ├── backend/
 │   ├── deployment.yaml
@@ -51,6 +50,10 @@ argocd-3-tier/
 ├── frontend/
 │   ├── deployment.yaml
 │   └── service.yaml
+|   └── namespace.yaml
+|
+├── migration/
+│   ├── migration.yaml
 |   └── namespace.yaml
 │
 └── README.md
