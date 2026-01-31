@@ -38,18 +38,20 @@ argocd-3-tier/
 │
 ├── database/
 │   ├── namespace.yaml
-│   ├── postgres-secret.yaml
-│   ├── postgres-deployment.yaml
-│   ├── postgres-service.yaml
-│   └── migration-job.yaml
+│   ├── secret.yaml
+│   ├── deployment.yaml
+│   ├── service.yaml
+│   └── job.yaml
 │
 ├── backend/
 │   ├── deployment.yaml
 │   └── service.yaml
+|   └── namespace.yaml
 │
 ├── frontend/
 │   ├── deployment.yaml
 │   └── service.yaml
+|   └── namespace.yaml
 │
 └── README.md
 ```
